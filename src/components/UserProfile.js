@@ -21,6 +21,10 @@ function UserProfileImage({image, fName, lName}) {
 }
 function UserDataForm({fName,lName,emailID,contactNO})
 {
+    console.log('UserDataForm : ' + fName)
+    console.log('UserDataForm : ' + lName)
+    console.log('UserDataForm : ' + emailID)
+    console.log('UserDataForm : ' + contactNO)
     const [first, setFirst] = useState(fName)
     const [last, setLast] = useState(lName)
     const [email, setEmail] = useState(emailID)
@@ -113,6 +117,9 @@ function UserProfile() {
         callApi();
     }, []);
     console.log('userData in profile : ' + userData)
+    console.log('userData in profile fName: ' + userData.fName)
+    console.log('userData in profile email: ' + userData.email)
+    console.log('userData in profile lName: ' + userData.lName)
     console.log('userData in profile IA: ' + auth.isAuthenticated())
     return (
         <ReactPlaceHolder

@@ -9,7 +9,8 @@ class Auth {
     constructor() {
         try {
             this.authenticated = JSON.parse(localStorage.getItem('authenticated'));
-            this.userData = JSON.parse(JSON.stringify(localStorage.getItem('userData')));
+            // this.userData = JSON.parse(JSON.stringify(localStorage.getItem('userData')));
+            this.userData = JSON.parse(localStorage.getItem('userData'));
             this.token = (localStorage.getItem('token'));
         }catch (e)
         {

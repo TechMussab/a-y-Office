@@ -64,9 +64,10 @@ function Item({itemData,popupHandle,myStyles=null}) {
         <div
         id={'item'+itemData.id}
             className={myStyles===null?"col-xs-12 col-sm-12 col-md-6 col-lg-4 col-sm-12 col-xs-12":myStyles }>
-            <div className="card card-height p-4 mt-4" onClick={ph}>
-
+            <div className="card card-height p-4 mt-4" >
+                <div onClick={ph}>
                 <ItemImage img={image} name={name}/>
+                </div>
                 <ItemInfo {...itemData} />
             </div>
         </div>

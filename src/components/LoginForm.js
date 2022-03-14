@@ -36,43 +36,44 @@ function LoginForm({isAuth, setIsAuth}) {
         }
     }
 
-
     return (
-        <div className="justify-content-center">
-            <div className="col-8card p-2 mt-4 card-dark">
+        <div className="row justify-content-center mt-4">
+            <div className="col-lg-6 col-md-8 col-sm-4 col-xs-4">
+                <div className="card">
 
-                <div className="card-header">
-                    Login
-                </div>
-                <div className="card-body">
-                    <div className="strong">
-                        <div className="text-danger">
-                            {error}
-                        </div>
+                    <div className="card-header">
+                        Login
                     </div>
-                    <div className="Login">
-                        <Form onSubmit={handleSubmit}>
-                            <Form.Group size="lg" controlId="email">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control
-                                    autoFocus
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                            </Form.Group>
-                            <Form.Group size="lg" controlId="password">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                />
-                            </Form.Group>
-                            <Button block size="lg" type="submit" disabled={!validateForm()}>
-                                Login
-                            </Button>
-                        </Form>
+                    <div className="card-body">
+                        <div className="strong">
+                            <div className="text-danger">
+                                {error}
+                            </div>
+                        </div>
+                        <div className="Login">
+                            <Form onSubmit={handleSubmit}>
+                                <Form.Group size="lg" controlId="email">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control
+                                        autoFocus
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Form.Group size="lg" controlId="password">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
+                                </Form.Group>
+                                <Button block size="lg" type="submit" disabled={!validateForm()}>
+                                    Login
+                                </Button>
+                            </Form>
+                        </div>
                     </div>
                 </div>
             </div>
